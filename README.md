@@ -1,4 +1,4 @@
-#Installation
+# Installation
 
 1. pip install torch torchvision
 2. pip install ninja yacs cython matplotlib tqdm
@@ -29,6 +29,21 @@ python setup.py build develop
 unset INSTALL_DIR
 ```
 # Test installation
+
+```bash
+cd demo
+wget https://download.pytorch.org/models/maskrcnn/e2e_faster_rcnn_X_101_32x8d_FPN_1x.pth
+python demo.py
+```
+
+# Drone View Detection Code
+
+Download the model weights from https://drive.google.com/file/d/1SCJf2JJmyCbxpDuy4njFaDw7xPqurpaQ/view?usp=sharing into ./drone_demo directory. 
+
+```bash
+cd drone_demo
+python demo.py
+```
 
 
 
