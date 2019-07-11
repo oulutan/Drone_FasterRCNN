@@ -1,3 +1,35 @@
+Installation
+1 - pip install torch torchvision
+2 - pip install ninja yacs cython matplotlib tqdm
+3 - 
+
+```bash
+export INSTALL_DIR=$PWD
+
+# install pycocotools
+cd $INSTALL_DIR
+git clone https://github.com/cocodataset/cocoapi.git
+cd cocoapi/PythonAPI
+python setup.py build_ext install
+
+# install PyTorch Detection
+cd $INSTALL_DIR
+git clone https://github.com/oulutan/maskrcnn-benchmark-custom
+cd maskrcnn-benchmark-custom
+
+# the following will install the lib with
+# symbolic links, so that you can modify
+# the files if you want and won't need to
+# re-build it
+python setup.py build develop
+
+
+unset INSTALL_DIR
+```
+
+
+
+---------------------- Original Readme -------------------
 # Faster R-CNN and Mask R-CNN in PyTorch 1.0
 
 This project aims at providing the necessary building blocks for easily
