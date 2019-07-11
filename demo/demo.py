@@ -15,6 +15,7 @@ coco_demo = COCODemo(
     confidence_threshold=0.7,
 )
 # load image and then run prediction
-import pdb;pdb.set_trace()
 image = cv2.imread('test_img.jpg')
 predictions = coco_demo.run_on_opencv_image(image)
+cv2.imshow('Predictions', predictions)
+cv2.waitKey(0)
