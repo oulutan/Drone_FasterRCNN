@@ -1,7 +1,8 @@
 from maskrcnn_benchmark.config import cfg
 from predictor import COCODemo
+import cv2
 
-config_file = "demo/e2e_faster_rcnn_X_101_32x8d_FPN_1x_custom.yaml"
+config_file = "e2e_faster_rcnn_X_101_32x8d_FPN_1x_custom.yaml"
 
 # update the config options with the config file
 cfg.merge_from_file(config_file)
@@ -14,5 +15,6 @@ coco_demo = COCODemo(
     confidence_threshold=0.7,
 )
 # load image and then run prediction
+import pdb;pdb.set_trace()
 image = cv2.imread('test_img.jpg')
 predictions = coco_demo.run_on_opencv_image(image)
