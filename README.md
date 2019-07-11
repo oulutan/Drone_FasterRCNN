@@ -1,7 +1,8 @@
-Installation
-1 - pip install torch torchvision
-2 - pip install ninja yacs cython matplotlib tqdm
-3 - 
+#Installation
+
+1. pip install torch torchvision
+2. pip install ninja yacs cython matplotlib tqdm
+3. Follow these scripts. There will be two repos in the main folder.
 
 ```bash
 export INSTALL_DIR=$PWD
@@ -16,6 +17,7 @@ python setup.py build_ext install
 cd $INSTALL_DIR
 git clone https://github.com/oulutan/maskrcnn-benchmark-custom
 cd maskrcnn-benchmark-custom
+git checkout drone
 
 # the following will install the lib with
 # symbolic links, so that you can modify
@@ -26,6 +28,9 @@ python setup.py build develop
 
 unset INSTALL_DIR
 ```
+# Test installation
+
+
 
 
 
