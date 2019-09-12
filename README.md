@@ -1,6 +1,12 @@
-This is a fork of maskrcnn-benchmark repository that is focused on detecting objects from drone view images. 
+This is a fork of maskrcnn-benchmark repository that is focused on detecting objects from drone view images. The model checkpoint is trained on the VisDrone dataset. 
 ![alt_text](drone_demo/drone_res.jpg)
 
+
+A sample output video
+https://drive.google.com/file/d/1CGDoWD9XWHL56O-sh15lLUVXx6StKggm/view
+
+VisDrone Dataset:
+http://aiskyeye.com/
 
 Original Repo:
 https://github.com/facebookresearch/maskrcnn-benchmark
