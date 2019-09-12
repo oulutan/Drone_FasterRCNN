@@ -18,5 +18,6 @@ coco_demo = COCODemo(
 # load image and then run prediction
 image = cv2.imread('visdrone_test_img_0000001_02999_d_0000005.jpg')
 predictions = coco_demo.run_on_opencv_image(image)
+#cv2.imwrite('drone_res.jpg', predictions)
 cv2.imshow('Predictions', predictions)
 cv2.waitKey(0)

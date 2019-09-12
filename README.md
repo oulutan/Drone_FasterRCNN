@@ -1,23 +1,27 @@
+This is a fork of maskrcnn-benchmark repository that is focused on detecting objects from drone view images. 
+![alt_text](drone_demo/drone_res.jpg)
+
+
+Original Repo:
+https://github.com/facebookresearch/maskrcnn-benchmark
+
+
 # Installation
 
-1. pip install torch torchvision
-2. pip install ninja yacs cython matplotlib tqdm
-3. Follow these scripts. There will be two repos in the main folder.
+1. pip install torch==1.1.0 torchvision==0.3.0 -f https://download.pytorch.org/whl/torch_stable.html
+2. pip install ninja yacs cython matplotlib tqdm opencv-contrib-python
+3. Follow these scripts. We will download cocoapi here as well
 
 ```bash
-export INSTALL_DIR=$PWD
-
+## in ./Drone_FasterRCNN
 # install pycocotools
-cd $INSTALL_DIR
 git clone https://github.com/cocodataset/cocoapi.git
 cd cocoapi/PythonAPI
 python setup.py build_ext install
 
+cd ../..
+## back in ./Drone_FasterRCNN
 # install PyTorch Detection
-cd $INSTALL_DIR
-git clone https://github.com/oulutan/maskrcnn-benchmark-custom
-cd maskrcnn-benchmark-custom
-git checkout drone
 
 # the following will install the lib with
 # symbolic links, so that you can modify
@@ -26,7 +30,6 @@ git checkout drone
 python setup.py build develop
 
 
-unset INSTALL_DIR
 ```
 # Test installation
 
@@ -38,7 +41,7 @@ python demo.py
 
 # Drone View Detection Code
 
-Download the model weights from https://drive.google.com/file/d/1SCJf2JJmyCbxpDuy4njFaDw7xPqurpaQ/view?usp=sharing into ./drone_demo directory. 
+Download the model weights that are trained on VisDrone dataset from https://drive.google.com/file/d/1SCJf2JJmyCbxpDuy4njFaDw7xPqurpaQ/view?usp=sharing into ./drone_demo directory. 
 
 ```bash
 cd drone_demo
